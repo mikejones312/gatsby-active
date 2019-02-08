@@ -26,7 +26,6 @@ export default function HTML(props) {
         />
      
         {props.postBodyComponents}
-        <script src="https://res.cloudinary.com/domywyfgu/raw/upload/v1549519660/agency/main.js"></script>
         <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" crossorigin="anonymous"></link>
       </body>
     </html>
