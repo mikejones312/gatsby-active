@@ -3,15 +3,23 @@ import { Link } from 'gatsby'
 
 
 
-class Navbar extends Component {
-
+class Navbar extends Component { 
+    constructor(props) {
+        super();     
+       this.state={
+           add_class:false
+       }
+      }  
     onclickcontact=(e)=>{
         document.getElementById('contactView').classList.add('is-active'); 
         // sendEventToGoogle('marketing','click','Contact Button in Header');
     }
+    onnavbarshow=(e)=>{
+      this.setState({add_class:!this.state.add_class});
+    }
     render() {
-
-
+       
+        const activeClass = this.state.add_class ? ' is-active' : '';
         return (
             <section className="hero is-info is-medium is-bold">
 
@@ -30,7 +38,7 @@ class Navbar extends Component {
                                         <span title="Contact Sales">Contact Sales</span>
                                     </div>
                                 </span>
-                                <span className="navbar-burger burger" data-target="navbarMenu">
+                                <span className={"navbar-burger burger "+activeClass} data-target="navbarMenu" onClick={this.onnavbarshow}>
                                     <span></span>
                                     <span></span>
                                     <span></span>
@@ -39,7 +47,7 @@ class Navbar extends Component {
 
 
 
-                            <div id="navbarMenu" className="navbar-menu">
+                            <div id="navbarMenu" className={"navbar-menu "+activeClass}>
                                 <div className="navbar-start">
                                     <div className="navbar-item has-dropdown is-hoverable is-hidden">
                                         <Link className="navbar-link" to="#">
