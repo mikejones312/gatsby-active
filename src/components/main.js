@@ -35,18 +35,19 @@ function rejectCookies() {
 }
 
 function closeCookieWindow() {
-    document.querySelector('.cookie-notification').remove()
+    document.getElementById('.cookie-notification').remove()
 }
 
 
-(function() {
-    var burger = document.querySelector('.burger');
-    var menu = document.querySelector('#' + burger.dataset.target);
-    burger.addEventListener('click', function() {
-        burger.classList.toggle('is-active');
-        menu.classList.toggle('is-active')
-    })
-})();
+// (function() {
+//     var burger = document.getElementById('.burger');
+//     console.log(burger);
+//     var menu = document.getElementById('#' + burger.dataset.target);
+//     burger.addEventListener('click', function() {
+//         burger.classList.toggle('is-active');
+//         menu.classList.toggle('is-active')
+//     })
+// })();
 window.addEventListener('scroll', function(e) {
     let breakpoint = 10;
     if (window.scrollY < breakpoint) {
