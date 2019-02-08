@@ -14,7 +14,7 @@ import Contact from '../components/front/contact'
 import Footer from '../components/front/footer'
 import Contactview from '../components/globals/contactview'
 
-
+require('../components/main');
 
 
 const IndexPage = () => (
@@ -29,8 +29,7 @@ const IndexPage = () => (
     <Comm />
     <Contact />
     <Footer />
-    <Contactview />
-  
+    <Contactview />  
     <Link to="/page-2/">Go to page 2</Link>
     <Link to="/page-nice/">Go to page Nice</Link>
     
