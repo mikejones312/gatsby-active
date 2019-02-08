@@ -4,28 +4,33 @@ import { Link } from 'gatsby'
 
 
 class Navbar extends Component {
+
+    onclickcontact=(e)=>{
+        document.getElementById('contactView').classList.add('is-active'); 
+        // sendEventToGoogle('marketing','click','Contact Button in Header');
+    }
     render() {
 
 
         return (
             <section className="hero is-info is-medium is-bold">
 
-                <div class="hero-head">
-                    <nav class="navbar is-fixed-top is-link">
-                        <div class="container">
-                            <div class="navbar-brand">
-                                <Link class="navbar-item" to="/">
+                <div className="hero-head">
+                    <nav className="navbar is-fixed-top is-link">
+                        <div className="container">
+                            <div className="navbar-brand">
+                                <Link className="navbar-item" to="/">
                                    <h1>Logo</h1> 
                                 </Link>
-                                <span class="navbar-item is-hidden-desktop">
-                                    <Link class="button is-primary is-small" to="javascript:void(0);" onclick="document.querySelector('.quickview').classList.add('is-active'); sendEventToGoogle('marketing','click','Contact Button in Header')">
-                                        <span class="icon">
-                                            <i class="fa fa-comments-o"></i>
+                                <span className="navbar-item is-hidden-desktop">
+                                    <div className="button is-primary is-small"  onClick={this.onclickcontact}>
+                                        <span className="icon">
+                                            <i className="fa fa-comments-o"></i>
                                         </span>
                                         <span title="Contact Sales">Contact Sales</span>
-                                    </Link>
+                                    </div>
                                 </span>
-                                <span class="navbar-burger burger" data-target="navbarMenu">
+                                <span className="navbar-burger burger" data-target="navbarMenu">
                                     <span></span>
                                     <span></span>
                                     <span></span>
@@ -34,94 +39,94 @@ class Navbar extends Component {
 
 
 
-                            <div id="navbarMenu" class="navbar-menu">
-                                <div class="navbar-start">
-                                    <div class="navbar-item has-dropdown is-hoverable is-hidden">
-                                        <Link class="navbar-link" to="#">
+                            <div id="navbarMenu" className="navbar-menu">
+                                <div className="navbar-start">
+                                    <div className="navbar-item has-dropdown is-hoverable is-hidden">
+                                        <Link className="navbar-link" to="#">
                                            Gatsby
                 </Link>
-                                        <div class="navbar-dropdown has-background-info">
+                                        <div className="navbar-dropdown has-background-info">
 
 
-                                            <Link class="navbar-item " to="/marketers/">Marketers</Link>
-
-
-
-                                            <Link class="navbar-item " to="/developers/">Developers</Link>
+                                            <Link className="navbar-item " to="/marketers/">Marketers</Link>
 
 
 
-                                            <Link class="navbar-item " to="/customers/">Customers</Link>
+                                            <Link className="navbar-item " to="/developers/">Developers</Link>
+
+
+
+                                            <Link className="navbar-item " to="/customers/">Customers</Link>
 
 
                                         </div>
                                     </div>
 
-                                    <span class="navbar-item is-hidden">
-                                        <Link class="button  is-white is-outlined " to="">
+                                    <span className="navbar-item is-hidden">
+                                        <Link className="button  is-white is-outlined " to="">
 
-                                            <small title="Open Accounts" class="has-text-normal">Open Accounts</small>
+                                            <small title="Open Accounts" className="has-text-normal">Open Accounts</small>
                                         </Link>
                                     </span>
 
 
-                                    <Link class="navbar-item " to="/marketers/">Marketers</Link>
+                                    <Link className="navbar-item " to="/marketers/">Marketers</Link>
 
 
 
-                                    <Link class="navbar-item " to="/developers/">Developers</Link>
+                                    <Link className="navbar-item " to="/developers/">Developers</Link>
 
 
 
-                                    <Link class="navbar-item " to="/customers/">Customers</Link>
+                                    <Link className="navbar-item " to="/customers/">Customers</Link>
 
 
                                 </div>
 
-                                <div class="navbar-end">
+                                <div className="navbar-end">
 
 
 
-                                    <div class="navbar-item has-dropdown is-hoverable">
-                                        <Link class="navbar-link" to="/">
+                                    <div className="navbar-item has-dropdown is-hoverable">
+                                        <Link className="navbar-link" to="/">
                                             
 </Link>
-                                        <div id="blogDropdown" class="navbar-dropdown has-background-info">
-                                            <div class="is-fluid">
-                                                <div class="columns">
+                                        <div id="blogDropdown" className="navbar-dropdown has-background-info">
+                                            <div className="is-fluid">
+                                                <div className="columns">
 
-                                                    <div class="column">
-                                                        <h5 class="title is-6 is-mega-menu-title">Topics</h5>
+                                                    <div className="column">
+                                                        <h5 className="title is-6 is-mega-menu-title">Topics</h5>
 
-                                                        <Link class="navbar-item " to="/content-marketing/">
+                                                        <Link className="navbar-item " to="/content-marketing/">
                                                              Marketing
                 </Link>
 
-                                                        <Link class="navbar-item " to="/customer-stories/">
+                                                        <Link className="navbar-item " to="/customer-stories/">
                                                              Stories
                 </Link>
 
-                                                        <Link class="navbar-item " to="/headless/">
+                                                        <Link className="navbar-item " to="/headless/">
                                                             
                 </Link>
 
-                                                        <Link class="navbar-item " to="/internet-of-things/">
+                                                        <Link className="navbar-item " to="/internet-of-things/">
                                                             Internet of Things
                 </Link>
 
-                                                        <Link class="navbar-item " to="/marketing-technology/">
+                                                        <Link className="navbar-item " to="/marketing-technology/">
                                                              Technology
                 </Link>
 
-                                                        <Link class="navbar-item " to="/marketing-trends/">
+                                                        <Link className="navbar-item " to="/marketing-trends/">
                                                              Trends
                 </Link>
 
-                                                        <Link class="navbar-item " to="/social-media/">
+                                                        <Link className="navbar-item " to="/social-media/">
                                                              Media
                 </Link>
 
-                                                        <Link class="navbar-item " to="/product-announcements/">
+                                                        <Link className="navbar-item " to="/product-announcements/">
                                                             Product Announcements
                 </Link>
 
@@ -130,20 +135,20 @@ class Navbar extends Component {
                                                 </div>
                                             </div>
 
-                                            <hr class="navbar-divider" />
-                                            <div class="navbar-item">
-                                                <div class="navbar-content">
-                                                    <div class="level is-mobile">
-                                                        <div class="level-left">
-                                                            <div class="level-item">
-                                                                <h6 class="title is-6"><Link to="/authors/"> Authors</Link></h6>
+                                            <hr className="navbar-divider" />
+                                            <div className="navbar-item">
+                                                <div className="navbar-content">
+                                                    <div className="level is-mobile">
+                                                        <div className="level-left">
+                                                            <div className="level-item">
+                                                                <h6 className="title is-6"><Link to="/authors/"> Authors</Link></h6>
                                                             </div>
                                                         </div>
-                                                        <div class="level-right">
-                                                            <div class="level-item">
-                                                                <Link class="button is-primary is-small" to="#">
-                                                                    <span class="icon is-small">
-                                                                        <i class="fa fa-rss"></i>
+                                                        <div className="level-right">
+                                                            <div className="level-item">
+                                                                <Link className="button is-primary is-small" to="#">
+                                                                    <span className="icon is-small">
+                                                                        <i className="fa fa-rss"></i>
                                                                     </span>
                                                                     <span>Subscribe</span>
                                                                 </Link>
@@ -156,29 +161,29 @@ class Navbar extends Component {
                                     </div>
 
 
-                                    <div class="navbar-item has-dropdown is-hoverable">
-                                        <Link class="navbar-link" to="#">
+                                    <div className="navbar-item has-dropdown is-hoverable">
+                                        <Link className="navbar-link" to="#">
                                             Platform
                 </Link>
-                                        <div class="navbar-dropdown has-background-info">
-                                            <Link class="navbar-item" target="_blank" to="#">
-                                                <div class="level is-mobile">
-                                                    <div class="level-left">
-                                                        <div class="level-item">
+                                        <div className="navbar-dropdown has-background-info">
+                                            <Link className="navbar-item" target="_blank" to="#">
+                                                <div className="level is-mobile">
+                                                    <div className="level-left">
+                                                        <div className="level-item">
                                                             <p>
-                                                                <i class="fa fa-book has-text-light"></i> <strong>Platform</strong>
+                                                                <i className="fa fa-book has-text-light"></i> <strong>Platform</strong>
                                                                 <br />
                                                                 <small> Easily Searchable Docs &amp; Specs</small>
                                                             </p></div>
                                                     </div>
                                                 </div>
                                             </Link>
-                                            <Link class="navbar-item" target="_blank" to="/">
-                                                <div class="level is-mobile">
-                                                    <div class="level-left">
-                                                        <div class="level-item">
+                                            <Link className="navbar-item" target="_blank" to="/">
+                                                <div className="level is-mobile">
+                                                    <div className="level-left">
+                                                        <div className="level-item">
                                                             <p>
-                                                                <i class="fa fa-terminal has-text-light"></i> <strong> REPL</strong>
+                                                                <i className="fa fa-terminal has-text-light"></i> <strong> REPL</strong>
                                                                 <br />
                                                                 <small> Learn the languadpoints</small>
                                                             </p>
@@ -186,12 +191,12 @@ class Navbar extends Component {
                                                     </div>
                                                 </div>
                                             </Link>
-                                            <Link class="navbar-item" target="_blank" to="/">
-                                                <div class="level is-mobile">
-                                                    <div class="level-left">
-                                                        <div class="level-item">
+                                            <Link className="navbar-item" target="_blank" to="/">
+                                                <div className="level is-mobile">
+                                                    <div className="level-left">
+                                                        <div className="level-item">
                                                             <p>
-                                                                <i class="fa fa-circle has-text-success chat-circle"></i> <strong>Community Chat</strong>
+                                                                <i className="fa fa-circle has-text-success chat-circle"></i> <strong>Community Chat</strong>
                                                                 <br />
                                                                 <small> Join chat for help and support</small>
                                                             </p>
@@ -204,38 +209,38 @@ class Navbar extends Component {
 
 
 
-                                    <div class="navbar-item has-dropdown is-hoverable is-hidden">
+                                    <div className="navbar-item has-dropdown is-hoverable is-hidden">
                          
-                                        <div class="navbar-dropdown has-background-info">
-                                            <Link class="navbar-item" to="/">
-                                                <span class="icon">
-                                                    <i class="fa fa-th"></i>
+                                        <div className="navbar-dropdown has-background-info">
+                                            <Link className="navbar-item" to="/">
+                                                <span className="icon">
+                                                    <i className="fa fa-th"></i>
                                                 </span>
                                                 <span title="Logout">My Instances</span>
                                             </Link>
-                                            <Link class="navbar-item" to="/">
-                                                <span class="icon">
-                                                    <i class="fa fa-sign-out"></i>
+                                            <Link className="navbar-item" to="/">
+                                                <span className="icon">
+                                                    <i className="fa fa-sign-out"></i>
                                                 </span>
                                                 <span title="Logout">Logout</span>
                                             </Link>
                                         </div>
                                     </div>
-                                    <span class="navbar-item">
-                                        <Link class="button is-white is-outlined" to="">
-                                            <span class="icon">
-                                                <i class="fa fa-sign-in"></i>
+                                    <span className="navbar-item">
+                                        <Link className="button is-white is-outlined" to="">
+                                            <span className="icon">
+                                                <i className="fa fa-sign-in"></i>
                                             </span>
-                                            <small title="Login to " class="has-text-normal">Sign In</small>
+                                            <small title="Login to " className="has-text-normal">Sign In</small>
                                         </Link>
                                     </span>
-                                    <span class="navbar-item">
-                                        <Link class="button is-primary" to="javascript:void(0);" onclick="document.querySelector('.quickview').classList.add('is-active'); sendEventToGoogle('marketing','click','Contact Button in Header')">
-                                            <span class="icon">
-                                                <i class="fa fa-comments-o"></i>
+                                    <span className="navbar-item">
+                                        <div className="button is-primary" to="javascript:void(0);" onClick={this.onclickcontact}>
+                                            <span className="icon">
+                                                <i className="fa fa-comments-o"></i>
                                             </span>
                                             <span title="Contact Sales">Contact Sales</span>
-                                        </Link>
+                                        </div>
                                     </span>
 
                                 </div>
