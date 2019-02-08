@@ -2,25 +2,27 @@ import React, { Component } from 'react'
 import { Link } from 'gatsby'
 
 class Contact extends Component {
-    
+	onclickcontact=(e)=>{
+        document.getElementById('contactView').classList.add('is-active'); 
+    }
 
     
     render()
      {
         return (
-<div class="box bottom-cta has-text-white has-background-grey">
-	<div class="container">
-		<div class="columns is-vcentered">
-			<div class="column is-6 is-offset-2">
+<div className="box bottom-cta has-text-white has-background-grey">
+	<div className="container">
+		<div className="columns is-vcentered">
+			<div className="column is-6 is-offset-2">
 				<p>
 					Exploring content solutions? Looking to replatform?
 				</p>
 				
 			</div>
-			<div class="column">
-				<a class="button is-primary" href="javascript:void(0);" onclick="document.querySelector('.quickview').classList.add('is-active');">
-					<span class="icon">
-						<i class="fa fa-comments-o"></i>
+			<div className="column">
+				<a className="button is-primary"  onClick={this.onclickcontact}>
+					<span className="icon">
+						<i className="fa fa-comments-o"></i>
 					</span>
 					<span>Contact Sales</span>
 				</a>
